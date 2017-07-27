@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app="coachApp">
 
 <head>
     <title></title>
@@ -20,18 +20,18 @@
 
     <!--App Stuff-->
     <script src="app/app.js"></script>
-    <script src="app/model/user.js"></script>
-    <script src="app/model/recipe.js"></script>
-    <script src="app/shared/navCtrl.js"></script>
+    <script src="app/model/users.js"></script>
+    <!--<script src="app/model/xxx.js"></script>-->
+    <!--<script src="app/shared/navCtrl.js"></script>-->
     <script src="app/home/homeCtrl.js"></script>
-    <script src="app/login/loginCtrl.js"></script>
-    <script src="app/recipe/recipeGalleryCtrl.js"></script>
+    <!--<script src="app/login/loginCtrl.js"></script>-->
+    <!--<script src="app/recipe/recipeGalleryCtrl.js"></script>
     <script src="app/recipe/recipeDetailsCtrl.js"></script>
-    <script src="app/recipe/newRecipeCtrl.js"></script>
+    <script src="app/recipe/newRecipeCtrl.js"></script>-->
     <link rel="stylesheet" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<h1>שלום עליכם !</h1>
+    <ng-view></ng-view>
 </body>
 </html>
