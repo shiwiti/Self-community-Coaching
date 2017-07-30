@@ -5,6 +5,7 @@ coachApp.factory("User", function(){
         this.password = plainObject.password;
         this.firstName = plainObject.firstName;
         this.lastName = plainObject.lastName;
+        this.role = plainObject.role;
         this.data = plainObject.data;
     };
 
