@@ -8,14 +8,16 @@
         { 
             "startDate":"02.08.17",
             "name": "עמידה בזמנים",
-            "progressionPrecent": 30,
-            "lastUpdate":"02.08.17"
+            "description":"חשוב עבור רצינות, החלטיות",            
+            "progressionSteps": 0.2, //"1 out of 5",
+            "reqDate":"09.08.17"
         },
         { 
             "startDate":"02.08.17",
             "name": "כיבוד הורים",
-            "progressionPrecent": 80,
-            "lastUpdate":"02.08.17"
+            "description":"מצוות הבורא, הכרת הטוב",            
+            "progressionSteps": 0.4, //"2 out of 5",
+            "reqDate":"05.08.17"
         }
     ],
     "visions": [
@@ -39,14 +41,16 @@
         { 
             "startDate":"02.08.17",
             "name": "עמידה בזמנים",
-            "progressionPrecent": 30,
-            "lastUpdate":"02.08.17"
+            "description":"חשוב עבור רצינות, החלטיות",            
+            "progressionSteps": 0.2, //"1 out of 5",
+            "reqDate":"09.08.17"
         },
         { 
-            "startDate":"02.08.17",
+           "startDate":"02.08.17",
             "name": "כיבוד הורים",
-            "progressionPrecent": 80,
-            "lastUpdate":"02.08.17"
+            "description":"מצוות הבורא, הכרת הטוב",            
+            "progressionSteps": 0.4, //"2 out of 5",
+            "reqDate":"05.08.17"
         }
     ],
     "visions": [

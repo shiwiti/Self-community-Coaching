@@ -1,4 +1,4 @@
-coachApp.controller("newTargetCtrl", function ($scope, $location, Target, activeUser ) {
+coachApp.controller("newTargetCtrl", function ($scope, $location, Target, targets, activeUser ) {
 
     // If the user is not logged in going back to home screen
     if (!activeUser.isLoggedIn()) {
