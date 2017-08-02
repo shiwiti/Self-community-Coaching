@@ -20,14 +20,11 @@
 
     <!--App Stuff-->
     <script src="app/app.js"></script>
-    <script src="app/model/users.js"></script>
+    <script src="app/services/userSrvc.js"></script>
     <!--<script src="app/model/xxx.js"></script>-->
     <!--<script src="app/shared/navCtrl.js"></script>-->
-    <script src="app\components\home\homeCtrl.js"></script>
-    <!--<script src="app/login/loginCtrl.js"></script>-->
-    <!--<script src="app/recipe/recipeGalleryCtrl.js"></script>
-    <script src="app/recipe/recipeDetailsCtrl.js"></script>
-    <script src="app/recipe/newRecipeCtrl.js"></script>-->
+    <script src="app/components/home/homeCtrl.js"></script>
+    <script src="app/components/login/login.js"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -36,9 +33,11 @@
 
     <div class="navbar">
         <a class="navbar-brand" href="#"> אימון עצמי וקהילתי</a>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="#">login</a>
+        <!--<a class="nav navbar-nav pull-left" href="#">כניסה</a>-->
+
+        <ul class="nav navbar-nav pull-left">
+            <li class="active" ng-controller="homeCtrl">
+                <a href="#" ng-click="login()">כניסה</a>
             </li>
         </ul>
     </div>

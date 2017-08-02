@@ -1,0 +1,62 @@
+[{
+    "firstName" : "nadav",
+    "lastName" : "shemesh",
+    "email" : "nadav@gmail.com",
+    "password" : "123",
+    "role" : "coachee",
+    "targets" : [
+        { 
+            "startDate":"02.08.17",
+            "name": "עמידה בזמנים",
+            "progressionPrecent": 30,
+            "lastUpdate":"02.08.17"
+        },
+        { 
+            "startDate":"02.08.17",
+            "name": "כיבוד הורים",
+            "progressionPrecent": 80,
+            "lastUpdate":"02.08.17"
+        }
+    ],
+    "visions": [
+        {
+            "category": "אישי",
+            "content": "ואהבת לרעך כמוך"
+        },
+        {
+            "category": "מקצועי",
+            "content": "עבודה עם סיפוק ותרומה לקהילה"
+        }
+    ]
+},
+{
+    "firstName" : "aharoni",
+    "lastName" : "levi",
+    "email" : "aharoni@gmail.com",
+    "password" : "123",
+    "role" : "coachee",
+    "targets" : [
+        { 
+            "startDate":"02.08.17",
+            "name": "עמידה בזמנים",
+            "progressionPrecent": 30,
+            "lastUpdate":"02.08.17"
+        },
+        { 
+            "startDate":"02.08.17",
+            "name": "כיבוד הורים",
+            "progressionPrecent": 80,
+            "lastUpdate":"02.08.17"
+        }
+    ],
+    "visions": [
+        {
+            "category": "אישי",
+            "content": "ואהבת לרעך כמוך"
+        },
+        {
+            "category": "מקצועי",
+            "content": "עבודה עם סיפוק ותרומה לקהילה"
+        }
+    ]
+}]

@@ -36,11 +36,11 @@ coachApp.config(function ($routeProvider) {
 // TODO: Delete this TESTINGGGGGGGGGG please update
 coachApp.controller("TestCtrl", function ($scope, User, activeUser, Recipe, recipes) {
     var plainUser = {
-        "email": "nir@nir.com",
-        "password": "nir123",
-        "firstName": "Nir",
-        "lastName": "Channes",
-        "data": "nir-recipes.json"
+        "email": "Aharoni@Aharoni.com",
+        "password": "a123",
+        "firstName": "Aharoni",
+        "lastName": "Levi",
+        // "data": "Aharoni-data.json" יש 2 קבצי מידע: מטרות וחזון. איך נצרף ?
     }
 
     var user = new User(plainUser);
