@@ -1,8 +1,8 @@
 coachApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
 
     // TODO: Detele this
-    $scope.email = "nir@nir.com";
-    $scope.password = "nir123";
+    $scope.email = "aharoni@gmail.com";
+    $scope.password = "123";
 
     $http.get("app/model/users.json").then(function (response) {
         $scope.users = [];
