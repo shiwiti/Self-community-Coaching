@@ -1,11 +1,12 @@
 // Shared Target Constructor
-coachApp.factory("Target", function(){
+coachApp.factory("Target", function () {
     function Target(plainObject) {
         this.startDate = plainObject.startDate;
         this.name = plainObject.name;
         this.description = plainObject.description;
         this.steps = plainObject.steps;
         this.reqDate = plainObject.reqDate;
+        this.Date = plainObject.Date;
         // this.imageUrl = plainObject.imageUrl;
     };
 
@@ -14,36 +15,37 @@ coachApp.factory("Target", function(){
 
 
 
-coachApp.factory("targets", function(target) {
+coachApp.factory("targets", function (target) {
     var targetArr = [];
 
-    var add = function(targetWoDate) {
-     //   targetArr.push(targetWoDate+targetWoDate.startDate=Date());
+    var add = function (target) {
+        target.Date = Date();
+        targetArr.push(target);
     }
 
-    var update = function(index, target) {
+    var update = function (index, target) {
         targetArr[index] = target;
     }
 
-    var remove = function(index) {
+    var remove = function (index) {
         targetArr.splice(index, 1);
     }
 
-    var load = function(targetPlainObjectArr) {
+    var load = function (targetPlainObjectArr) {
         for (var i = 0; i < targetPlainObjectArr.length; i++) {
             targetArr.push(new Target(targetPlainObjectArr[i]))
         }
     }
 
-    var getAll = function() {
+    var getAll = function () {
         return targetArr;
     }
 
-    var get = function(index) {
+    var get = function (index) {
         return targetArr[index];
     }
 
-    var removeAll = function() {
+    var removeAll = function () {
         targetArr = [];
     }
 
