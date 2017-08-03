@@ -26,10 +26,10 @@ coachApp.config(function ($routeProvider) {
         //     templateUrl: "app/vision/visionDetails.html",
         //     controller: "visionDetailsCtrl"
         // })
-        // .when("/vision/newVision", {
-        //     templateUrl: "app/vision/newVision.html",
-        //     controller: "newVisionCtrl"
-        // })
+         .when("/vision/newVision", {
+             templateUrl: "app/components/vision/newVision/newVision.html",
+             controller: "newVisionCtrl"
+         })
 
 });
 

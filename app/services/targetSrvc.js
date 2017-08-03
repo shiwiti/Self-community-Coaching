@@ -6,8 +6,6 @@ coachApp.factory("Target", function () {
         this.description = plainObject.description;
         this.steps = plainObject.steps;
         this.reqDate = plainObject.reqDate;
-        this.Date = plainObject.Date;
-        // this.imageUrl = plainObject.imageUrl;
     };
 
     return Target;
@@ -21,33 +19,33 @@ coachApp.factory("targets", function (target) {
     var add = function (target) {
         target.Date = Date();
         targetArr.push(target);
-    }
+    };
 
     var update = function (index, target) {
         targetArr[index] = target;
-    }
+    };
 
     var remove = function (index) {
         targetArr.splice(index, 1);
-    }
+    };
 
     var load = function (targetPlainObjectArr) {
         for (var i = 0; i < targetPlainObjectArr.length; i++) {
             targetArr.push(new Target(targetPlainObjectArr[i]))
         }
-    }
+    };
 
     var getAll = function () {
         return targetArr;
-    }
+    };
 
     var get = function (index) {
         return targetArr[index];
-    }
+    };
 
     var removeAll = function () {
         targetArr = [];
-    }
+    };
 
     return {
         add: add,
@@ -57,5 +55,5 @@ coachApp.factory("targets", function (target) {
         getAll: getAll,
         get: get,
         removeAll: removeAll
-    }
-})
+    };
+});
