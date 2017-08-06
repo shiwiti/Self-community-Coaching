@@ -1,34 +1,40 @@
 // Shared User Constructor
-coachApp.factory("User", function(){
+coachApp.factory("User", function () {
     function User(plainObject) {
         this.email = plainObject.email;
         this.password = plainObject.password;
         this.firstName = plainObject.firstName;
         this.lastName = plainObject.lastName;
+        this.fullName = function () {
+            return this.firstName + " " + this.lastName;
+        };
         this.role = plainObject.role;
-        this.data = plainObject.data;
+        this.targetsData = plainObject.targetsData;
+        this.visionsData = plainObject.visionsData;
+
     };
+
 
     return User;
 });
 
 // Service that manges the active user
-coachApp.factory("activeUser", function(User){
+coachApp.factory("activeUser", function (User) {
     var user = null;
 
-    var isLoggedIn = function() {
+    var isLoggedIn = function () {
         return user ? true : false;
     };
 
-    var login = function(loggedInUser) {
+    var login = function (loggedInUser) {
         user = loggedInUser;
     };
 
-    var logout = function() {
+    var logout = function () {
         user = null;
     };
 
-    var get = function() {
+    var get = function () {
         return user;
     };
 
@@ -37,5 +43,5 @@ coachApp.factory("activeUser", function(User){
         login: login,
         logout: logout,
         get: get
-    };   
+    };
 });

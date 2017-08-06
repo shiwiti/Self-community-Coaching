@@ -11,3 +11,15 @@
     font-family: "Pacifico";
     font-size: 4em;
 }
+
+table, td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+
+}
+table, td .odd {
+    background-color:#f1f1f1;
+}
+
+/* table, td .even {get default background-color}

@@ -14,7 +14,7 @@ coachApp.config(function ($routeProvider) {
         //     templateUrl: "app/targets/targetDetails.html",
         //     controller: "targetDetailsCtrl"
         // })
-        .when("/newTarget", {
+        .when("/targets/newTarget", {
             templateUrl: "app/components/target/newTarget/newTarget.html",
             controller: "newTargetCtrl"
         })

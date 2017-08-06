@@ -3,6 +3,7 @@ coachApp.factory("Target", function () {
     function Target(plainObject) {
         this.startDate = plainObject.startDate;
         this.name = plainObject.name;
+        this.category = plainObject.category;
         this.description = plainObject.description;
         this.steps = plainObject.steps;
         this.reqDate = plainObject.reqDate;

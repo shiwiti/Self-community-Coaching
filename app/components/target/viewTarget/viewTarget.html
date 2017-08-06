@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="page-header">
+        <h1>המטרות של {{greetName}}</h1>
+    </div>
+    <form>
+        <input type="text" name="search" id="search" placeholder="חפש שם מטרה" ng-model="filterTarget" />
+        
+        מיין לפי :
+        <select ng-model="orderTarget" name="sort" id="sort">
+          <option value="">כולם</option>
+          <option value="category">קטגורי'א</option>
+          <option value="reqDate">תאריך יעד</option>
+        </select>
+    </form>
+
+    <table >
+        <tr ng-repeat="target in targetArr | filter:filterBytargetName | orderBy: orderTarget" 
+        ng-click="openDetails($index)">
+            <td class="odd" ng-if="$odd">{{target.name}}</td>
+            <td class="even" ng-if="$even">{{target.name}}</td>
+            <td class="odd" ng-if="$odd">{{target.category}}</td>
+            <td class="even" ng-if="$even">{{target.category}}</td>
+            <td class="odd" ng-if="$odd">{{target.reqDate}}</td>
+            <td class="even" ng-if="$even">{{target.reqDate}}</td>
+        </tr>
+    </table>
+</div>
