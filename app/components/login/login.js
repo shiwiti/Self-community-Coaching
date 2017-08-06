@@ -1,6 +1,6 @@
 coachApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
 
-    // TODO: Detele this
+    // TODO: Detele this 
     $scope.email = "aharoni@gmail.com";
     $scope.password = "123";
 
