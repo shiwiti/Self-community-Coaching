@@ -6,14 +6,14 @@ coachApp.config(function ($routeProvider) {
             templateUrl: "app/components/home/home.html",
             controller: "homeCtrl"
         })
-        // .when("/targets", {
-        //     templateUrl: "app/target/targetsGallery.html",
-        //     controller: "targetsGalleryCtrl"
-        // })
-        // .when("/targets/:targetIndex", {
-        //     templateUrl: "app/targets/targetDetails.html",
-        //     controller: "targetDetailsCtrl"
-        // })
+        .when("/targets", {
+            templateUrl: "app/components/target/viewTarget/viewTarget.html",
+            controller: "viewTargetCtrl"
+        })
+         .when("/targets/:targetIndex", {
+             templateUrl: "app/components/target/updtTarget/updtTarget.html",
+             controller: "targetUpdtCtrl"
+ })
         .when("/targets/newTarget", {
             templateUrl: "app/components/target/newTarget/newTarget.html",
             controller: "newTargetCtrl"
@@ -26,10 +26,10 @@ coachApp.config(function ($routeProvider) {
         //     templateUrl: "app/vision/visionDetails.html",
         //     controller: "visionDetailsCtrl"
         // })
-         .when("/vision/newVision", {
-             templateUrl: "app/components/vision/newVision/newVision.html",
-             controller: "newVisionCtrl"
-         })
+        .when("/vision/newVision", {
+            templateUrl: "app/components/vision/newVision/newVision.html",
+            controller: "newVisionCtrl"
+        })
 
 });
 
