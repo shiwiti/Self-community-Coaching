@@ -14,7 +14,7 @@ coachApp.factory("Target", function () {
 
 
 
-coachApp.factory("targets", function (target) {
+coachApp.factory("targets", function (Target) {
     var targetArr = [];
 
     var add = function (target) {
