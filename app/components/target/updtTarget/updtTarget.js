@@ -1,4 +1,4 @@
-coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, activeUser,  $routeParams, Target) {
+coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, activeUser,  $routeParams, Target, $filter) {
 
     // If the user is not logged in going back to home screen
     if (!activeUser.isLoggedIn()) {
@@ -6,8 +6,13 @@ coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, acti
         return;
     }
 
+    targets.getCategories().then(function (response) {
+        $scope.categories = response.data;
+    });
+
     // Creating a copy of the target object so changes won't be reflected on the array
     $scope.target = new Target(targets.get($routeParams.targetIndex));
+    $scope.date = new Date($scope.target.reqDate);
 
     $scope.cancel = function() {
         $location.path("/targets");

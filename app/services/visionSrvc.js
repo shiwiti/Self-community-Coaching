@@ -12,12 +12,23 @@ coachApp.factory("Vision", function () {
 });
 
 
+function formatDate(date) {
+    if (date) {
+        newDate = new Date(date);
+        var month = newDate.getMonth();
+        var year = newDate.getFullYear();
+        var day = newDate.getDate();
+
+        return day + "/" + month + "/" + year;
+    }
+    return "no valid date";
+}
 
 coachApp.factory("visions", function (target) {
     var visionArr = [];
 
     var add = function (vision) {
-        vision.startDate = Date();
+        vision.startDate = formatDate(new Date());
         visionArr.push(vision);
     }
 

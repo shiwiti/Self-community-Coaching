@@ -12,13 +12,24 @@ coachApp.factory("Target", function () {
     return Target;
 });
 
+function formatDate (date) {
+        if(date) {
+            newDate = new Date(date);
+            var month = newDate.getMonth();
+            var year = newDate.getFullYear();
+            var day = newDate.getDate();
 
+            return day + "/" + month + "/" + year;
+        }
+        return "no valid date";
+    }
 
-coachApp.factory("targets", function (Target) {
+coachApp.factory("targets", function (Target, $http) {
     var targetArr = [];
 
     var add = function (target) {
-        target.Date = Date();
+        target.startDate = formatDate(new Date());
+        target.reqDate = formatDate(target.reqDate);
         targetArr.push(target);
     };
 
@@ -35,6 +46,10 @@ coachApp.factory("targets", function (Target) {
             targetArr.push(new Target(targetPlainObjectArr[i]))
         }
     };
+
+    var getCategories = function () {
+        return $http.get("app/model/categories.json");
+    }
 
     var getAll = function () {
         return targetArr;
@@ -55,6 +70,7 @@ coachApp.factory("targets", function (Target) {
         load: load,
         getAll: getAll,
         get: get,
-        removeAll: removeAll
+        removeAll: removeAll,
+        getCategories: getCategories
     };
 });

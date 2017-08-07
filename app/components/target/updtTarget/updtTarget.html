@@ -17,10 +17,8 @@
         <form class="form-horizontal">
           <div class="form-group">
             <label for="category">בחר קטגוריה:</label>
-            <select class="form-control" id="category" ng-model="target.category">
-        <option> אישי</option>
-        <option> מקצועי</option>
-        <option> חברתי</option>
+            <select class="form-control" id="category" ng-init="target.category = (target.category || categories[0])" ng-model="target.category">
+              <option ng-repeat="option in categories">{{option}}</option>
         </select>
           </div>
       </div>
@@ -41,7 +39,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="reqDate">תאריך יעד</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="reqDate" ng-model="target.reqDate"></input>
+              <input type="date" class="form-control" id="reqDate" value="{{date | date:'yyyy-MM-dd'}}" ng-model="target.reqDate"></input>
             </div>
           </div>
 

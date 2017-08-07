@@ -10,14 +10,15 @@ coachApp.config(function ($routeProvider) {
             templateUrl: "app/components/target/viewTarget/viewTarget.html",
             controller: "viewTargetCtrl"
         })
-         .when("/targets/:targetIndex", {
-             templateUrl: "app/components/target/updtTarget/updtTarget.html",
-             controller: "targetUpdtCtrl"
- })
+        
         .when("/targets/newTarget", {
             templateUrl: "app/components/target/newTarget/newTarget.html",
             controller: "newTargetCtrl"
         })
+         .when("/targets/:targetIndex", {
+             templateUrl: "app/components/target/updtTarget/updtTarget.html",
+             controller: "targetUpdtCtrl"
+ })
         // .when("/vision", {
         //     templateUrl: "app/vision/vision.html",
         //     controller: "visionCtrl"

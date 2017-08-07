@@ -6,6 +6,9 @@ coachApp.controller("newTargetCtrl", function ($scope, $location, Target, target
         return;
     }
 
+    targets.getCategories().then(function (response) {
+        $scope.categories = response.data;
+    });
     $scope.target = new Target({});
 
     $scope.cancel = function () {
