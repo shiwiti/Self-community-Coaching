@@ -15,11 +15,18 @@
 table, td  {
   border: 1px solid grey;
   border-collapse: collapse;
-  padding: 5px;
+  padding: 22px;
+  font-size: larger;
+  font-style: normal;
 
 }
-table, td .odd {
-    background-color:#f1f1f1;
+
+table {
+    margin:10px;
 }
 
-/* table, td .even {get default background-color}
+
+tr:nth-child(even) {
+    background-color: #efefef;
+}
+/* table, td .odd {get default background-color}

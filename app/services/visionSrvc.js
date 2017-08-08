@@ -3,7 +3,6 @@ coachApp.factory("Vision", function () {
     function Vision(plainObject) {
         this.startDate = plainObject.startDate;
         this.name = plainObject.name;
-        this.content = plainObject.content;
         this.category = plainObject.category;
         this.imageUrl = plainObject.imageUrl;
     };
@@ -24,7 +23,7 @@ function formatDate(date) {
     return "no valid date";
 }
 
-coachApp.factory("visions", function (target) {
+coachApp.factory("visions", function (Vision, $http) {
     var visionArr = [];
 
     var add = function (vision) {
@@ -46,6 +45,10 @@ coachApp.factory("visions", function (target) {
         }
     }
 
+    var getCategories = function () {
+        return $http.get("app/model/categories.json");
+    }
+
     var getAll = function () {
         return visionArr;
     }
@@ -61,6 +64,7 @@ coachApp.factory("visions", function (target) {
         remove: remove,
         load: load,
         getAll: getAll,
-        get: get
+        get: get,
+        getCategories: getCategories
     }
 });

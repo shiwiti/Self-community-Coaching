@@ -13,7 +13,12 @@
         </select>
     </form>
 
-    <table >
+    <table class="oddEvenTable">
+        <tr>
+            <th>שם המטרה</th>
+            <th>קטגוריה</th>
+            <th>תאריך יעד</th>
+        </tr>
         <tr ng-repeat="target in targetArr | filter:filterBytargetName | orderBy: orderTarget" 
         ng-click="openDetails($index)">
             <td class="odd" ng-if="$odd">{{target.name}}</td>
