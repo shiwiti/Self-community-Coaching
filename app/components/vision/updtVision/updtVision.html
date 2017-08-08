@@ -1,9 +1,11 @@
 <!--This view is responsible for showing, updating and deleting a vision-->
 <div class="container">
-<h1>:ערוך חזון</h1>
+  <h1>ערוך חזון:</h1>
   <div class="page-header">
     <h1>{{vision.name}}</h1>
     <h3>{{vision.category}}</h3>
+    <h5>תאריך פתיחה: {{vision.startDate}}</h5>
+
   </div>
 
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -17,12 +19,12 @@
 
 
       <div class="form-group">
-         <label class="control-label col-sm-2" for="category">בחר קטגוריה:</label>
+        <label class="control-label col-sm-2" for="category">בחר קטגוריה:</label>
         <div class="col-sm-10">
-         <select class="form-control" id="category" ng-init="vision.category = categories[0]" ng-model="vision.category">
+          <select class="form-control" id="category" ng-init="vision.category = (vision.category || categories[0])" ng-model="vision.category">
               <option ng-repeat="category in categories">{{category}}</option>
         </select>
-      </div>
+        </div>
       </div>
 
       <div class="form-group">
@@ -33,11 +35,11 @@
       </div>
 
       <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <div class="pull-right">
-                <button type="submit" class="btn btn-default" ng-click="cancel()">Cancel</button>
-                <button type="submit" class="btn btn-primary" ng-click="update()">Update</button>
-                <button type="submit" class="btn btn-danger" ng-click="remove()">Delete</button>
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="submit" class="btn btn-default" ng-click="cancel()">חזור</button>
+            <button type="submit" class="btn btn-primary" ng-click="update()">עדכן</button>
+            <button type="submit" class="btn btn-danger" ng-click="remove()">מחק</button>
           </div>
         </div>
       </div>

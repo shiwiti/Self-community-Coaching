@@ -28,10 +28,10 @@ coachApp.config(function ($routeProvider) {
             templateUrl: "app/components/vision/newVision/newVision.html",
             controller: "newVisionCtrl"
         })
- //  .when("/visions/:visionIndex", {
-        //     templateUrl: "app/vision/visionDetails.html",
-        //     controller: "visionDetailsCtrl"
-        // })
+  .when("/visions/:visionIndex", {
+            templateUrl: "app/components/vision/updtVision/updtVision.html",
+            controller: "visionUpdtCtrl"
+        })
 });
 
 // TODO: Delete this TESTINGGGGGGGGGG please update

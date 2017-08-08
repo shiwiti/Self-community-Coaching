@@ -29,4 +29,8 @@ table {
 tr:nth-child(even) {
     background-color: #efefef;
 }
-/* table, td .odd {get default background-color}
+ /*table, td .odd {get default background-color}*/
+
+.vision-item {
+    cursor: pointer;
+}
