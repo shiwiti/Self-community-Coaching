@@ -19,19 +19,19 @@ coachApp.config(function ($routeProvider) {
              templateUrl: "app/components/target/updtTarget/updtTarget.html",
              controller: "targetUpdtCtrl"
  })
-        // .when("/vision", {
-        //     templateUrl: "app/vision/vision.html",
-        //     controller: "visionCtrl"
-        // })
-        //  .when("/vision/:visionIndex", {
-        //     templateUrl: "app/vision/visionDetails.html",
-        //     controller: "visionDetailsCtrl"
-        // })
-        .when("/vision/newVision", {
+         .when("/visions", {
+             templateUrl: "app/components/vision/viewVision/viewVision.html",
+             controller: "visionViewCtrl"
+         })
+       
+        .when("/visions/newVision", {
             templateUrl: "app/components/vision/newVision/newVision.html",
             controller: "newVisionCtrl"
         })
-
+ //  .when("/visions/:visionIndex", {
+        //     templateUrl: "app/vision/visionDetails.html",
+        //     controller: "visionDetailsCtrl"
+        // })
 });
 
 // TODO: Delete this TESTINGGGGGGGGGG please update

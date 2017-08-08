@@ -12,11 +12,11 @@ coachApp.controller("newVisionCtrl", function ($scope, $location, Vision, vision
     $scope.vision = new Vision({});
 
     $scope.cancel = function () {
-        $location.path("/vision");
+        $location.path("/visions");
     }
 
     $scope.create = function () {
         visions.add($scope.vision);
-        $location.path("/vision");
+        $location.path("/visions");
     }
 });
