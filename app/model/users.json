@@ -1,7 +1,7 @@
 [
     {
-        "firstName": "nadav",
-        "lastName": "shemesh",
+        "firstName": "נדב",
+        "lastName": "שמש",
         "email": "nadav@gmail.com",
         "password": "123",
         "role": "coachee",
@@ -26,17 +26,21 @@
         "visionsData": [
             {
                 "category": "אישי",
-                "content": "ואהבת לרעך כמוך"
+                "name": "ואהבת לרעך כמוך",
+                "startDate": "02/08/2017",
+                "imageUrl": ""
             },
             {
                 "category": "מקצועי",
-                "content": "עבודה עם סיפוק ותרומה לקהילה"
+                "name": "עבודה עם סיפוק ותרומה לקהילה",
+                "startDate": "02/08/2017",
+                "imageUrl": ""
             }
         ]
     },
     {
-        "firstName": "aharoni",
-        "lastName": "levi",
+        "firstName": "אהרוני",
+        "lastName": "לוי",
         "email": "aharoni@gmail.com",
         "password": "123",
         "role": "coachee",
@@ -61,11 +65,15 @@
         "visionsData": [
             {
                 "category": "אישי",
-                "content": "ואהבת לרעך כמוך"
+                "name": "ואהבת לרעך כמוך",
+                "startDate": "02/08/2017",
+                "imageUrl": ""
             },
             {
                 "category": "מקצועי",
-                "content": "עבודה עם סיפוק ותרומה לקהילה"
+                "name": "עבודה עם סיפוק ותרומה לקהילה",
+                "startDate": "02/08/2017",
+                "imageUrl": ""
             }
         ]
     }

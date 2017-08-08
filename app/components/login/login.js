@@ -22,7 +22,7 @@ function(response) {
         if (user != null) {
             activeUser.login(user);
             $uibModalInstance.close("Logged-in");
-            $location.path("/vision")
+            $location.path("/visions")
         } else {
             $scope.failedAttempt = true;
         }
