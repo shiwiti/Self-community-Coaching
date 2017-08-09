@@ -51,15 +51,8 @@ coachApp.factory("targets", function (Target, $http) {
         for (var i = 0; i < targetPlainObjectArr.length; i++) {
 
             // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
-            if (targetPlainObjectArr[i].completed){
-                compTargs++;
-            }
-            // if ((targetPlainObjectArr[i].reqDate-Date())<=2){
-            //     soonTargs++;
-            //     }
             targetArr.push(new Target(targetPlainObjectArr[i]))
         }
-        totTargs = targetArr.length;
     };
 
     var getCategories = function () {

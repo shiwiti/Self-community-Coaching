@@ -17,28 +17,42 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
     } else {
         $scope.targetArr = targets.getAll();
     }
-    $scope.totTargs = targets.totTargs;
-    $scope.compTargs = targets.compTargs;
-    $scope.soonTargs = targets.soonTargs;
+    // $scope.totTargs = targets.totTargs;
+    // $scope.compTargs = targets.compTargs;
+    // $scope.soonTargs = targets.soonTargs;
 
-    $scope.getTotalTargets = function() {
+    $scope.getTotalTargets = function () {
         return $scope.targetArr.length;
     }
 
+    $scope.getCompletedTargets = function () {
+         $scope.compTargs = 0;
+        for (var i = 0; i < $scope.targetArr.length; i++) {
 
-    $scope.openDetails = function (index) {
-        $location.path("/targets/" + index)
-    }
-
-
-    $scope.filterBytargetName = function (item) {
-        if (!$scope.filterTarget) {
-            return true;
-        } else if (item.name.indexOf($scope.filterTarget) != -1) {
-            return true;
-        } else {
-            return false;
+            // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
+            if ($scope.targetArr[i].completed) {
+                $scope.compTargs++;
+            }
         }
-    };
+        return $scope.compTargs;
+        }
 
-});
+
+
+        $scope.openDetails = function (index) {
+            $location.path("/targets/" + index)
+        }
+
+
+        $scope.filterBytargetName = function (item) {
+            if (!$scope.filterTarget) {
+                return true;
+            } else if (item.name.indexOf($scope.filterTarget) != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+            
+
+    });
