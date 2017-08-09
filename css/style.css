@@ -31,6 +31,6 @@ tr:nth-child(even) {
 }
  /*table, td .odd {get default background-color}*/
 
-.vision-item {
+.target-item {
     cursor: pointer;
 }

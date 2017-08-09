@@ -7,22 +7,23 @@ coachApp.factory("Target", function () {
         this.description = plainObject.description;
         this.steps = plainObject.steps;
         this.reqDate = plainObject.reqDate;
+        this.completed = plainObject.completed;
     };
 
     return Target;
 });
 
-function formatDate (date) {
-        if(date) {
-            newDate = new Date(date);
-            var month = newDate.getMonth();
-            var year = newDate.getFullYear();
-            var day = newDate.getDate();
+function formatDate(date) {
+    if (date) {
+        newDate = new Date(date);
+        var month = newDate.getMonth();
+        var year = newDate.getFullYear();
+        var day = newDate.getDate();
 
-            return day + "/" + month + "/" + year;
-        }
-        return "no valid date";
+        return day + "/" + month + "/" + year;
     }
+    return "no valid date";
+}
 
 coachApp.factory("targets", function (Target, $http) {
     var targetArr = [];
@@ -42,7 +43,9 @@ coachApp.factory("targets", function (Target, $http) {
     };
 
     var load = function (targetPlainObjectArr) {
+
         for (var i = 0; i < targetPlainObjectArr.length; i++) {
+                    // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
             targetArr.push(new Target(targetPlainObjectArr[i]))
         }
     };
