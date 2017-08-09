@@ -17,6 +17,14 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
     } else {
         $scope.targetArr = targets.getAll();
     }
+    $scope.totTargs = targets.totTargs;
+    $scope.compTargs = targets.compTargs;
+    $scope.soonTargs = targets.soonTargs;
+
+    $scope.getTotalTargets = function() {
+        return $scope.targetArr.length;
+    }
+
 
     $scope.openDetails = function (index) {
         $location.path("/targets/" + index)
