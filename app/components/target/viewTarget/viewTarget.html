@@ -8,7 +8,7 @@
           <option value="">כולם</option>
           <option value="category">קטגורי'א</option>
           <option value="reqDate">תאריך יעד</option>
-          <option value="reqDate">תאריך יעד</option>
+          <option value="completed">מצב המטרה</option>
 
         </select>
     </form>
@@ -27,6 +27,8 @@
             <td class="even" ng-if="$even">{{target.category}}</td>
             <td class="odd" ng-if="$odd">{{target.reqDate}}</td>
             <td class="even" ng-if="$even">{{target.reqDate}}</td>
+            <td class="odd" ng-if="$odd">{{target.completed}}</td>
+            <td class="even" ng-if="$even">{{target.completed}}</td>
         </tr>
     </table>
 </div>
