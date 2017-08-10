@@ -27,9 +27,9 @@ function formatDate(date) {
 
 coachApp.factory("targets", function (Target, $http) {
     var targetArr = [];
-    var totTargs = 0;
-    var compTargs = 0;
-    var soonTargs = 0;
+    // var totTargs = 0;
+    // var compTargs = 0;
+    // var soonTargs = 0;
 
     var add = function (target) {
         target.startDate = formatDate(new Date());
@@ -46,8 +46,8 @@ coachApp.factory("targets", function (Target, $http) {
     };
 
     var load = function (targetPlainObjectArr) {
-         compTargs = 0;
-         soonTargs = 0;
+        //  compTargs = 0;
+        //  soonTargs = 0;
         for (var i = 0; i < targetPlainObjectArr.length; i++) {
 
             // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
@@ -80,8 +80,8 @@ coachApp.factory("targets", function (Target, $http) {
         get: get,
         removeAll: removeAll,
         getCategories: getCategories,
-        totTargs: totTargs,
-        compTargs: compTargs,
-        soonTargs: soonTargs
+        // totTargs: totTargs,
+        // compTargs: compTargs,
+        // soonTargs: soonTargs
     };
 });

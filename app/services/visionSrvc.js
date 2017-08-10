@@ -57,6 +57,9 @@ coachApp.factory("visions", function (Vision, $http) {
         return visionArr[index];
     }
 
+    var removeAll = function () {
+        visionArr = [];
+    };
 
     return {
         add: add,
@@ -65,6 +68,7 @@ coachApp.factory("visions", function (Vision, $http) {
         load: load,
         getAll: getAll,
         get: get,
+        removeAll: removeAll,
         getCategories: getCategories
     }
 });
