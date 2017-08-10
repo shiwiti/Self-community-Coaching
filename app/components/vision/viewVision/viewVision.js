@@ -1,4 +1,4 @@
-coachApp.controller("visionViewCtrl", function ($scope, $location, activeUser, visions) {
+coachApp.controller("visionViewCtrl", function ($scope, $location, activeUser, visions,$uibModal) {
 
     // If the user is not logged in going back to home screen
     if (!activeUser.isLoggedIn()) {
@@ -19,5 +19,12 @@ coachApp.controller("visionViewCtrl", function ($scope, $location, activeUser, v
 
     $scope.openDetails = function(index) {
         $location.path("/visions/" + index)
+    }
+
+     $scope.addVision = function() {
+        $uibModal.open({
+            templateUrl: "app/components/vision/newVision/newVision.html",
+            controller: "newVisionCtrl"
+        })
     }
 });

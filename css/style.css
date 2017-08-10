@@ -34,3 +34,8 @@ tr:nth-child(even) {
 .target-item {
     cursor: pointer;
 }
+
+
+.vision-item {
+    cursor: pointer;
+}

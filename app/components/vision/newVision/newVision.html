@@ -1,9 +1,17 @@
-<!--This view is responsible for showing, updating and deleting a vision-->
-<div class="container">
+<!--This view is responsible for adding a new vision-->
 
-  <div class="page-header">
-    <h1>{{vision.name}}</h1>
-    <h3>{{vision.category}}</h3>
+<div class="modal-header">
+    <button type="button" class="close" aria-label="Close" ng-click="cancel()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">הוספת חזון חדש</h4>
+</div>
+
+<div class="modal-body">
+
+  <div class="modal-header">
+    <h3>{{vision.name}}</h3>
+    <h5>{{vision.category}}</h5>
   </div>
 
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
