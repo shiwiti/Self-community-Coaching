@@ -1,4 +1,4 @@
-coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, activeUser, targets) {
+coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, activeUser, targets, $uibModal) {
 
     // If the user is not logged in going back to home screen
     // if (!activeUser.isLoggedIn()) {
@@ -17,9 +17,6 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
     } else {
         $scope.targetArr = targets.getAll();
     }
-    // $scope.totTargs = targets.totTargs;
-    // $scope.compTargs = targets.compTargs;
-    // $scope.soonTargs = targets.soonTargs;
 
     $scope.getTotalTargets = function () {
         return $scope.targetArr.length;
@@ -30,7 +27,7 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
         for (var i = 0; i < $scope.targetArr.length; i++) {
 
             // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
-            if ($scope.targetArr[i].completed) {
+            if (!$scope.targetArr[i].completed) {
                 $scope.compTargs++;
             }
         }
@@ -43,6 +40,12 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
             $location.path("/targets/" + index)
         }
 
+        $scope.addTarget = function() {
+            $uibModal.open({
+                templateUrl: "app/components/target/newTarget/newTarget.html",
+                controller: "newTargetCtrl"
+            })
+        }
 
         $scope.filterBytargetName = function (item) {
             if (!$scope.filterTarget) {

@@ -1,4 +1,4 @@
-coachApp.controller("newTargetCtrl", function ($scope, $location, Target, targets, activeUser ) {
+coachApp.controller("newTargetCtrl", function ($scope, $location, Target, targets, activeUser, $uibModalInstance) {
 
     // If the user is not logged in going back to home screen
     // if (!activeUser.isLoggedIn()) {
@@ -12,10 +12,12 @@ coachApp.controller("newTargetCtrl", function ($scope, $location, Target, target
     $scope.target = new Target({});
 
     $scope.cancel = function () {
+        $uibModalInstance.close("canceled");
         $location.path("/targets");
     }
 
     $scope.create = function () {
+        $uibModalInstance.close("added");
         targets.add($scope.target);
         $location.path("/targets");
     }
