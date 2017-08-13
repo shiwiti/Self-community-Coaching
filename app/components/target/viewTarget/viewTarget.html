@@ -27,8 +27,8 @@
             <td class="even" ng-if="$even">{{target.category}}</td>
             <td class="odd" ng-if="$odd">{{target.reqDate}}</td>
             <td class="even" ng-if="$even">{{target.reqDate}}</td>
-            <td class="odd" ng-if="$odd">{{target.completed}}</td>
-            <td class="even" ng-if="$even">{{target.completed}}</td>
+            <td class="odd" ng-if="$odd">{{isCompletedTargetDisplay()}}</td>
+            <td class="even" ng-if="$even">{{isCompletedTargetDisplay()}}</td>
         </tr>
     </table>
 

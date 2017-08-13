@@ -23,7 +23,7 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
     }
 
     $scope.getCompletedTargets = function () {
-         $scope.compTargs = 0;
+        $scope.compTargs = 0;
         for (var i = 0; i < $scope.targetArr.length; i++) {
 
             // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
@@ -32,30 +32,38 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
             }
         }
         return $scope.compTargs;
+    }
+
+    $scope.isCompletedTargetDisplay = function (index) {
+
+        if ($scope.targetArr[index].completed === false) {
+            return "פתוחה";
         }
-
-
-
-        $scope.openDetails = function (index) {
-            $location.path("/targets/" + index)
+        else {
+            return "סגורה";
         }
+    }
 
-        $scope.addTarget = function() {
-            $uibModal.open({
-                templateUrl: "app/components/target/newTarget/newTarget.html",
-                controller: "newTargetCtrl"
-            })
+    $scope.openDetails = function (index) {
+        $location.path("/targets/" + index)
+    }
+
+    $scope.addTarget = function () {
+        $uibModal.open({
+            templateUrl: "app/components/target/newTarget/newTarget.html",
+            controller: "newTargetCtrl"
+        })
+    }
+
+    $scope.filterBytargetName = function (item) {
+        if (!$scope.filterTarget) {
+            return true;
+        } else if (item.name.indexOf($scope.filterTarget) != -1) {
+            return true;
+        } else {
+            return false;
         }
+    };
 
-        $scope.filterBytargetName = function (item) {
-            if (!$scope.filterTarget) {
-                return true;
-            } else if (item.name.indexOf($scope.filterTarget) != -1) {
-                return true;
-            } else {
-                return false;
-            }
-        };
-            
 
-    });
+});
