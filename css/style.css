@@ -39,3 +39,8 @@ tr:nth-child(even) {
 .vision-item {
     cursor: pointer;
 }
+
+.modal-dialog {
+    width: 560px;
+    height: 720px;
+  }
