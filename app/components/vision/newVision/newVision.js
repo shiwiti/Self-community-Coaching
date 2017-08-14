@@ -17,8 +17,13 @@ coachApp.controller("newVisionCtrl", function ($scope, $location, Vision, vision
     }
 
     $scope.create = function () {
+        if($scope.vision.name && $scope.vision.category){
         $uibModalInstance.close("added");
         visions.add($scope.vision);
         $location.path("/visions");
+        }
+        else {
+            alert("נא ודא ערכים בשדה שם וקטגוריא" )
+        }
     }
 });

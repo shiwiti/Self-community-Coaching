@@ -34,15 +34,23 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
         return $scope.compTargs;
     }
 
-    $scope.isCompletedTargetDisplay = function (index) {
+    // var isCompleted = function () {
+    //     return $scope.targetArr ? true : false;
+    // };
 
-        if ($scope.targetArr[index].completed === false) {
-            return "פתוחה";
-        }
-        else {
-            return "סגורה";
-        }
-    }
+    // $scope.isCompletedTargetHebrew = function () {
+    //     $scope.compTargsArr = [];
+    //     for (var i = 0; i < $scope.targetArr.length; i++) {
+
+    //     if ($scope.targetArr[i].completed === true) {
+    //         $scope.compTargsArr.push("סגורה")
+    //     }
+    //     else {
+    //         $scope.compTargsArr.push("פתוחה")
+    //     }
+    //     }
+    //     return $scope.compTargsArr;
+    // }
 
     $scope.openDetails = function (index) {
         $location.path("/targets/" + index)

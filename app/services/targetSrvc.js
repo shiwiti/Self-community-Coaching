@@ -15,15 +15,30 @@ coachApp.factory("Target", function () {
 
 function formatDate(date) {
     if (date) {
-        newDate = new Date(date);
-        var month = newDate.getMonth();
-        var year = newDate.getFullYear();
-        var day = newDate.getDate();
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
 
-        return day + "/" + month + "/" + year;
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
     }
-    return "no valid date";
+    return "0000-00-00";//no valid date
 }
+
+// function formatDate(date) {
+//     if (date) {
+//         newDate = new Date(date);
+//         var month = newDate.getMonth()+1;
+//         var year = newDate.getFullYear();
+//         var day = newDate.getDate();
+
+//         return day + "/" + month + "/" + year;
+//     }
+//     return "0000-00-00";//no valid date
+// }
 
 coachApp.factory("targets", function (Target, $http) {
     var targetArr = [];
@@ -38,6 +53,7 @@ coachApp.factory("targets", function (Target, $http) {
     };
 
     var update = function (index, target) {
+        target.reqDate = formatDate(target.reqDate);
         targetArr[index] = target;
     };
 

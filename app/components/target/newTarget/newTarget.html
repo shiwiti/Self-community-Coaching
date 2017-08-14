@@ -9,21 +9,22 @@
   </div>
 
 
+  <div class="modal-body">
 
   <div class="modal-header">
     <h3>{{target.name}}</h3>
     <!-- <h5>{{target.category}}</h5> -->
   </div>
 
-  <div class="modal-body">
-    <div class="container">
+  
+    <!-- <div class="container"> -->
 
       <!-- <div class="page-header">
     <h1>{{target.name}}</h1>
   </div> -->
 
-      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <form class="form-horizontal">
+  <div class="col-sm-12">  
+            <form class="form-horizontal">
           <div class="form-group">
             <label class="control-label col-sm-2" for="name">שם המטרה:</label>
             <div class="col-sm-10">
@@ -63,7 +64,7 @@
 
             <label class="control-label col-sm-2" for="chck">האם המטרה הושלמה ?</label>
             <div class="col-sm-10">
-              <input type="checkbox" class="" id="chck" value="" ng-model="target.completed">
+              <input type="checkbox" class="form-control" id="chck" ng-model="target.completed">
             </div>
           </div>
 
@@ -80,7 +81,7 @@
     </div>
 
   </div>
-</div>
+<!-- </div> -->
 
     <!--maybe to display an image from same(*) category vision-->
     <!--<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
