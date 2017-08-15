@@ -1,4 +1,4 @@
-coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, activeUser,  $routeParams, Target, $filter) {
+coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, activeUser,  $routeParams, Target, $filter, $uibModal) {
 
     // If the user is not logged in going back to home screen
     // if (!activeUser.isLoggedIn()) {
@@ -30,8 +30,9 @@ coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, acti
 
 
     $scope.remove = function() {
-        targets.remove($routeParams.targetIndex);
-        $location.path("/targets");
-    }
-    
+            $uibModal.open({
+                templateUrl: "app/components/target/delAssure/delAssure.html",
+                controller: "delAssureCtrl"
+            })
+        }    
 })
