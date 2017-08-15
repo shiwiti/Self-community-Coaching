@@ -23,7 +23,7 @@ coachApp.controller("newVisionCtrl", function ($scope, $location, Vision, vision
         $location.path("/visions");
         }
         else {
-            alert("נא ודא ערכים בשדה שם וקטגוריא" )
+            alert("נא ודא ערכים בשדות שם וקטגוריא" )
         }
     }
 });

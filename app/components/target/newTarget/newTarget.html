@@ -28,13 +28,13 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="name">שם המטרה:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name" placeholder="שם המטרה..." ng-model="target.name">
+              <input type="text" class="form-control" id="name" placeholder="שם המטרה..." ng-model="target.name" required="true">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="category">בחר קטגוריה:</label>
             <div class="col-sm-10">
-              <select class="form-control" id="category" ng-init="target.category = categories[0]" ng-model="target.category">
+              <select class="form-control" id="category" ng-init="target.category = categories[0]" ng-model="target.category" required="true">
               <option ng-repeat="category in categories">{{category}}</option>
         </select>
             </div>
@@ -56,7 +56,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="reqDate">תאריך יעד</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="reqDate" ng-model="target.reqDate">
+              <input type="date" class="form-control" id="reqDate" ng-model="target.reqDate" required="true">
             </div>
           </div>
 

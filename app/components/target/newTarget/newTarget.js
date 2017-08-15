@@ -17,8 +17,14 @@ coachApp.controller("newTargetCtrl", function ($scope, $location, Target, target
     }
 
     $scope.create = function () {
+        if($scope.target.name && $scope.target.category && $scope.target.reqDate){            
         $uibModalInstance.close("added");
         targets.add($scope.target);
         $location.path("/targets");
     }
+    else {
+        alert("נא ודא ערכים בשדות שם , קטגוריא ותאריך יעד" )
+    }
+}
+
 });

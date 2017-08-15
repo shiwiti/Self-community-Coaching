@@ -19,9 +19,15 @@ coachApp.controller("targetUpdtCtrl", function ($scope, $location, targets, acti
     }
 
     $scope.update = function() {
+        if($scope.target.name && $scope.target.category && $scope.target.reqDate){                        
         targets.update($routeParams.targetIndex, $scope.target);
         $location.path("/targets");
     }
+    else {
+        alert("נא ודא ערכים בשדות שם , קטגוריא ותאריך יעד" )
+    }
+}
+
 
     $scope.remove = function() {
         targets.remove($routeParams.targetIndex);

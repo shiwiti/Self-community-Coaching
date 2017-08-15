@@ -19,8 +19,13 @@ coachApp.controller("visionUpdtCtrl", function ($scope, $location, visions, acti
     }
 
     $scope.update = function() {
+        if($scope.vision.name && $scope.vision.category){          
         visions.update($routeParams.visionIndex, $scope.vision);
         $location.path("/visions");
+    }
+    else {
+        alert("נא ודא ערכים בשדות שם וקטגוריא" )
+    }
     }
 
     $scope.remove = function() {
