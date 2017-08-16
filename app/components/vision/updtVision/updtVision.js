@@ -29,8 +29,12 @@ coachApp.controller("visionUpdtCtrl", function ($scope, $location, visions, acti
     }
 
     $scope.remove = function() {
+        var r = confirm("האם למחוק ?");
+        if (r==true) {
         visions.remove($routeParams.visionIndex);
         $location.path("/visions");
+    }
+    else {}
     }
     
 })

@@ -44,3 +44,13 @@ tr:nth-child(even) {
     width: 560px;
     height: 720px;
   }
+
+  .footer-bottom {
+    width: 100%;
+    position: fixed; 
+    bottom: 0;
+	background: #E3E3E3;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
