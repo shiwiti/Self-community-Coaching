@@ -2,10 +2,10 @@ var coachApp = angular.module("coachApp", ["ngRoute", "ngAnimate", "ui.bootstrap
 
 coachApp.config(function ($routeProvider) {
     $routeProvider
-        .when("/", {
-            templateUrl: "app/components/home/home.html",
-            controller: "homeCtrl"
-        })
+    .when("/", {
+        templateUrl: "app/components/home/home.html",
+        controller: "homeCtrl"
+    })
         .when("/targets", {
             templateUrl: "app/components/target/viewTarget/viewTarget.html",
             controller: "viewTargetCtrl"
@@ -31,5 +31,10 @@ coachApp.config(function ($routeProvider) {
   .when("/visions/:visionIndex", {
             templateUrl: "app/components/vision/updtVision/updtVision.html",
             controller: "visionUpdtCtrl"
+        })
+        
+        .when("/:crslIndex ", {
+            templateUrl: "app/components/home/intro-coach/intro.html",
+            controller: "introCtrl"
         })
 });
