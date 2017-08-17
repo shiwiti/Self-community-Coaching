@@ -17,7 +17,7 @@
         <tr>
             <th>שם המטרה</th>
             <th>קטגוריה</th>
-            <th>תאריך יעד</th>
+            <th>תאריך יעד [yyyy-mm-dd]  </th>
             <th>מצב המטרה</th>
         </tr>
         <tr ng-repeat="target in targetArr | filter:filterBytargetName | orderBy: orderTarget" ng-click="openDetails($index)" class="target-item">
@@ -27,8 +27,8 @@
             <td class="even" ng-if="$even">{{target.category}}</td>
             <td class="odd" ng-if="$odd">{{target.reqDate}}</td>
             <td class="even" ng-if="$even">{{target.reqDate}}</td>
-            <td class="odd" ng-if="$odd">{{target.completed}}</td>
-            <td class="even" ng-if="$even">{{target.completed}}</td>
+            <td class="odd" ng-if="$odd">{{isCompHebr(target)}}</td>
+            <td class="even" ng-if="$even">{{isCompHebr(target)}}</td>
         </tr>
     </table>
 

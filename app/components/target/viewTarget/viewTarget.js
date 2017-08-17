@@ -1,10 +1,10 @@
 coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, activeUser, targets, $uibModal) {
 
     // If the user is not logged in going back to home screen
-    // if (!activeUser.isLoggedIn()) {
-    //     $location.path("/");
-    //     return;
-    // }
+    if (!activeUser.isLoggedIn()) {
+        $location.path("/");
+        return;
+    }
 
     $scope.greetName = activeUser.get().fullName();
 
@@ -73,5 +73,17 @@ coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, active
         }
     };
 
+// display target.completed boolean in Hebrew at the targets table column "מצב המטרה"
+$scope.isCompHebr = function (target){
+    var txt;
+    
+    if (target.completed) {
+        txt = "סגורה"
+    }
+else {
+    txt = "פתוחה"
+}
+return txt;
+}
 
 });
