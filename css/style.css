@@ -40,17 +40,53 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+/* .addVision {
+    display: block;
+} */
+
 .modal-dialog {
     width: 560px;
     height: 720px;
   }
 
+  /* Make the body 100% of your page, with a min-height of 100% too. */
+
+  main {
+    /* height:100%; */
+    min-height: 100%;   
+  }
+
+  
   .footer-bottom {
     width: 100%;
-    position: fixed; 
+    z-index: -10;
+    height: 1em;
+    position: relative; 
     bottom: 0;
 	background: #E3E3E3;
 	border-top: 1px solid #DDDDDD;
-	padding-top: 0.5%;
-	padding-bottom: 0.5%;
+	padding-top: 0.2%;
+	padding-bottom: 0.2%;
 }
+
+/* Carousel styling */
+
+.carousel-caption > p {
+
+    font-size: small
+}
+
+/* #slides_control > div{
+    height: 200px;
+  }
+  #slides_control >img{
+    margin:auto;
+    width: 400px;
+  }
+  #slides_control {
+    position:absolute;
+    width: 400px;
+    left:50%;
+    top:20px;
+   margin-left:-200px;
+  } */

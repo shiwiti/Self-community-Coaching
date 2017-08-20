@@ -1,23 +1,23 @@
-[
-    {
-        "name": "האתגר",
-        "description": "במהלך חיינו, לכולנו מחשבות ורעיונות פורצי דרך, תובנות והחלטות נהדרות. העניין שלא תמיד משקיעים בהם מחשבה, זמן",
-        "imageUrl": "http://he.bcdn.biz/Images/2013/2/3/1bd389ec-5286-41c7-9b30-cee67ad6defa.jpg",
-        "imageUrlAlt":"image of challenge icon"
-    },
-    {
-        "name": "הפתרון",
-        "description": "יישום web אישי המלווה את המתאמן לפני, במהלך, ואחרי תהליך האימון העיקרי. היישום הינו כלי עבודה interactive ",
-        "imageUrl": "https://blogs.cfainstitute.org/marketintegrity/files/2014/11/solution.jpg",
-        "imageUrlAlt":"image of solution icon"      
-    },
-    {
-        "name": "התוצאה",
-        "description": "שלוות נפש; אני עושה כמיטב יכולתי",
-        "imageUrl": "http://www.arachim.org/img/Articles/03092012154102_12118011912.jpg",
-        "imageUrlAlt":"image of result icon"
-    }
-]
+// [
+//     {
+//         "name": "האתגר",
+//         "description": "במהלך חיינו, לכולנו מחשבות ורעיונות פורצי דרך, תובנות והחלטות נהדרות. העניין שלא תמיד משקיעים בהם מחשבה, זמן",
+//         "imageUrl": "http://he.bcdn.biz/Images/2013/2/3/1bd389ec-5286-41c7-9b30-cee67ad6defa.jpg",
+//         "imageUrlAlt":"image of challenge icon"
+//     },
+//     {
+//         "name": "הפתרון",
+//         "description": "יישום web אישי המלווה את המתאמן לפני, במהלך, ואחרי תהליך האימון העיקרי. היישום הינו כלי עבודה interactive ",
+//         "imageUrl": "https://blogs.cfainstitute.org/marketintegrity/files/2014/11/solution.jpg",
+//         "imageUrlAlt":"image of solution icon"      
+//     },
+//     {
+//         "name": "התוצאה",
+//         "description": "שלוות נפש; אני עושה כמיטב יכולתי",
+//         "imageUrl": "http://www.arachim.org/img/Articles/03092012154102_12118011912.jpg",
+//         "imageUrlAlt":"image of result icon"
+//     }
+// ]
 
 // במהלך חיינו, לכולנו מחשבות ורעיונות פורצי דרך, תובנות והחלטות נהדרות. העניין שלא תמיד משקיעים בהם מחשבה, זמן \n
 // ומשאבים ב&#39;יום שאחרי&#39;. מסתבר , שדפוס התנהלות דומה מלווה לא מעט אנשים שעוברים, ובמיוחד שעברו תהליך אימון\n

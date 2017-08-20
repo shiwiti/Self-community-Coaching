@@ -33,8 +33,8 @@ coachApp.config(function ($routeProvider) {
             controller: "visionUpdtCtrl"
         })
         
-        .when("/:crslIndex ", {
-            templateUrl: "app/components/home/intro-coach/intro.html",
-            controller: "introCtrl"
-        })
+        // .when("/:crslIndex ", {
+        //     templateUrl: "app/components/home/intro-coach/intro.html",
+        //     controller: "introCtrl"
+        // })
 });

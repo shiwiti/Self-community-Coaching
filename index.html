@@ -36,13 +36,14 @@
     <script src="app/components/target/delAssure/delAssure.js"></script>
 
     <script src="app/components/login/login.js"></script>
-    <script src="app/components/home/intro-coach/intro.js"></script>
+    <!-- <script src="app/components/home/intro-coach/intro.js"></script> -->
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <main>
     <nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -70,10 +71,13 @@
     </nav>
 
     <ng-view></ng-view>
-
+</main>
+            
     <div class="footer-bottom text-center">
+            <!-- footer-bottom  -->
         <div class="container">
             <p class="panel-footer"> אימון באמונה --- גרסא ראשונית </p>
+            <!-- class="panel-footer" -->
         </div>
     </div>
 </body>
