@@ -10,11 +10,11 @@ coachApp.config(function ($routeProvider) {
             templateUrl: "app/components/target/viewTarget/viewTarget.html",
             controller: "viewTargetCtrl"
         })
-        
-        .when("/targets/newTarget", {
-            templateUrl: "app/components/target/newTarget/newTarget.html",
-            controller: "newTargetCtrl"
-        })
+         //no need - uses a modal page
+        // .when("/targets/newTarget", {
+        //     templateUrl: "app/components/target/newTarget/newTarget.html",
+        //     controller: "newTargetCtrl"
+        // })
          .when("/targets/:targetIndex", {
              templateUrl: "app/components/target/updtTarget/updtTarget.html",
              controller: "targetUpdtCtrl"
@@ -23,11 +23,12 @@ coachApp.config(function ($routeProvider) {
              templateUrl: "app/components/vision/viewVision/viewVision.html",
              controller: "visionViewCtrl"
          })
-       
-        .when("/visions/newVision", {
-            templateUrl: "app/components/vision/newVision/newVision.html",
-            controller: "newVisionCtrl"
-        })
+         
+       //no need - uses a modal page
+        // .when("/visions/newVision", {
+        //     templateUrl: "app/components/vision/newVision/newVision.html",
+        //     controller: "newVisionCtrl"
+        // })
   .when("/visions/:visionIndex", {
             templateUrl: "app/components/vision/updtVision/updtVision.html",
             controller: "visionUpdtCtrl"

@@ -75,6 +75,16 @@ tr:nth-child(even) {
 
     font-size: small
 }
+.enlarge {
+    transform: scale (2,2);
+    transform-origin: 0 0;
+}
+
+img.resize {
+    width:540px; /* you can use % */
+    height: auto;
+}
+
 
 /* #slides_control > div{
     height: 200px;

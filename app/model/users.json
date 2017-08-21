@@ -64,8 +64,17 @@
                 "reqDate": "2017-08-07",
                 "category": "אישי",
                 "completed": false
-            }
-        ],
+            },
+        {
+            "startDate": "2017-08-21",
+            "name": "ללמוד. לאהוב. להתאמן. לקנות תרופה לאימא נ'י",
+            "description": "לעשות נחת רוח ליוצרנו ולעשות רצון בוראנו",
+            "steps": "השלמת home carousel @Self-community-Coaching והודעה לניר חנס ני. לנשום טוב, לחשוב טוב ולדבר טוב אין עוד מלבדו\n התעמלות עם אימא ני \n.בית מרקחת מכבי - התקומה יפו",
+            "reqDate": "2017-08-21",
+            "category": "אישי",
+            "completed": false
+        }
+                    ],
         "visionsData": [
             {
                 "category": "אישי",
