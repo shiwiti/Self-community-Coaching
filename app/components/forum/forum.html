@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="page-header">
+        <h1>פורום המתאמן {{greetName}}</h1>
+    </div>
+    <form>
+        <input type="text" name="search" id="search" placeholder="חפש שם דיון" ng-model="filterForum" /> מיין לפי :
+        <select ng-model="orderForum" name="sort" id="sort">
+          <option value="">כולם</option>
+          <option value="target-Vision">מטרה-חזון</option>
+          
+          <option value="category">קטגורי'א</option>
+
+          <option value="author">נפתח על ידי</option>
+          <option value="replies">משובים</option>
+          <option value="lastPost">משוב אחרון</option>
+          
+        </select>
+    </form>
+
+    <table class="oddEvenTable table table-condensed">
+        <tr>
+            <th>שם הדיון</th>
+            <th>קטגוריה</th>
+            <th>נפתח על ידי  </th>
+            <th>משובים</th>
+            <th>משוב אחרון</th>
+        </tr>
+        <tr ng-repeat="discussion in forumArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
+            <td class="odd" ng-if="$odd">{{discussion.name}}</td>
+            <td class="even" ng-if="$even">{{discussion.name}}</td>
+            <td class="odd" ng-if="$odd">{{discussion.category}}</td>
+            <td class="even" ng-if="$even">{{discussion.category}}</td>
+            <td class="odd" ng-if="$odd">{{discussion.author}}</td>
+            <td class="even" ng-if="$even">{{discussion.author}}</td>
+            <td class="odd" ng-if="$odd">{{discussion(replies)}}</td>
+            <td class="even" ng-if="$even">{{discussion(replies)}}</td>
+            <td class="odd" ng-if="$odd">{{discussion.lastPost}}</td>
+            <td class="even" ng-if="$even">{{discussion.lastPost}}</td>
+
+        </tr>
+    </table>
+
+    <p>
+        <a class="btn btn-primary btn-lg" ng-click="addDiscussion()"> הוסף נושא חדש לדיון </a>
+    </p>
+
+    <h1>תכולת ה- forum</h1>
+    <p> סך דיונים: {{getTotalDiscussion()}}</p>
+    <p> מתוכן אודות מטרות: {{getTargetsdiscussion()}}</p>
+</div>
