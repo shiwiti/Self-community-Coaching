@@ -2,12 +2,11 @@
 coachApp.factory("Discussion", function () {
     function Discussion(plainObject) {
         this.startDate = plainObject.startDate;
+        this.targetOrVision = plainObject.targetOrVision;
         this.name = plainObject.name;
         this.category = plainObject.category;
-        this.description = plainObject.description;
-        this.steps = plainObject.steps;
-        this.reqDate = plainObject.reqDate;
-        this.completed = plainObject.completed;
+        this.author = plainObject.author;        
+        this.replies = plainObject.replies;
     };
 
     return Discussion;
@@ -28,46 +27,25 @@ function formatDate(date) {
     return "0000-00-00";//no valid date
 }
 
-// function formatDate(date) {
-//     if (date) {
-//         newDate = new Date(date);
-//         var month = newDate.getMonth()+1;
-//         var year = newDate.getFullYear();
-//         var day = newDate.getDate();
+coachApp.factory("discussions", function (Discussion, $http) {
+    var discussionsArr = [];
 
-//         return day + "/" + month + "/" + year;
-//     }
-//     return "0000-00-00";//no valid date
-// }
-
-coachApp.factory("targets", function (Target, $http) {
-    var targetArr = [];
-    // var totTargs = 0;
-    // var compTargs = 0;
-    // var soonTargs = 0;
-
-    var add = function (target) {
-        target.startDate = formatDate(new Date());
-        target.reqDate = formatDate(target.reqDate);
-        targetArr.push(target);
+    var addDiscussion = function (discussion) {
+        discussion.startDate = formatDate(new Date());
+        discussionsArr.push(discussion);
     };
 
-    var update = function (index, target) {
-        target.reqDate = formatDate(target.reqDate);
-        targetArr[index] = target;
+    var addReply = function (reply, discussion) {
+        var repliesArr = [];
+        reply.startDate = formatDate(new Date());
+        repliesArr.push(reply);
     };
 
-    var remove = function (index) {
-        targetArr.splice(index, 1);
-    };
 
-    var load = function (targetPlainObjectArr) {
-        //  compTargs = 0;
-        //  soonTargs = 0;
-        for (var i = 0; i < targetPlainObjectArr.length; i++) {
+    var load = function (discussionsPlainObjectArr) {
+        for (var i = 0; i < discussionsPlainObjectArr.length; i++) {
 
-            // targetPlainObjectArr.reqDate[i] = formatDate(targetPlainObjectArr.reqDate[i]);
-            targetArr.push(new Target(targetPlainObjectArr[i]))
+            discussionsArr.push(new Discussion(discussionsPlainObjectArr[i]))
         }
     };
 
@@ -76,15 +54,15 @@ coachApp.factory("targets", function (Target, $http) {
     }
 
     var getAll = function () {
-        return targetArr;
+        return discussionsArr;
     };
 
     var get = function (index) {
-        return targetArr[index];
+        return discussionsArr[index];
     };
 
     var removeAll = function () {
-        targetArr = [];
+        discussionsArr = [];
     };
 
     return {
