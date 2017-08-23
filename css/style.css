@@ -61,12 +61,15 @@ tr:nth-child(even) {
     width: 100%;
     z-index: -10;
     height: 1em;
-    position: relative; 
-    bottom: 0;
+    position: fixed; /*changed from relative */
+    bottom: 3%; /*changed from 0 */
 	background: #E3E3E3;
 	border-top: 1px solid #DDDDDD;
 	padding-top: 0.2%;
 	padding-bottom: 0.2%;
+}
+.panel-footer {
+    width: 100%    
 }
 
 /* Carousel styling */
