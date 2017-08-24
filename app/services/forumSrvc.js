@@ -2,11 +2,12 @@
 coachApp.factory("Discussion", function () {
     function Discussion(plainObject) {
         this.startDate = plainObject.startDate;
-        this.targetOrVision = plainObject.targetOrVision;
+        this.section = plainObject.Section; //target Or Vision
         this.name = plainObject.name;
         this.category = plainObject.category;
         this.author = plainObject.author;        
-        this.replies = plainObject.replies;
+        this.content = plainObject.content;  
+        this.replyIndex = plainObject.replyIndex;
     };
 
     return Discussion;
@@ -32,14 +33,19 @@ coachApp.factory("discussions", function (Discussion, $http) {
 
     var addDiscussion = function (discussion) {
         discussion.startDate = formatDate(new Date());
-        discussionsArr.push(discussion);
+        discussion.replyIndex=0;
+        discussionsArr.push(discussion)
     };
 
-    var addReply = function (reply, discussion) {
-        var repliesArr = [];
-        reply.startDate = formatDate(new Date());
-        repliesArr.push(reply);
-    };
+    var addReply = function (index, discussion) { //index=discussionIndex
+        // var repliesArr = [];// (?)
+        discussion.replyIndex++;
+        
+        discussion.replyIndex.startDate = formatDate(new Date());
+        // discussion.replyIndex.content = // @ reply.js
+
+        discussionsArr[index] = discussion;
+        };    
 
 
     var load = function (discussionsPlainObjectArr) {
@@ -66,16 +72,13 @@ coachApp.factory("discussions", function (Discussion, $http) {
     };
 
     return {
-        add: add,
-        update: update,
-        remove: remove,
+        addDiscussion: addDiscussion,
+        addReply: addReply,
+        // remove: remove,
         load: load,
         getAll: getAll,
         get: get,
         removeAll: removeAll,
-        getCategories: getCategories,
-        // totTargs: totTargs,
-        // compTargs: compTargs,
-        // soonTargs: soonTargs
+        getCategories: getCategories
     };
 });

@@ -3,15 +3,15 @@
         <h1>פורום המתאמן {{greetName}}</h1>
     </div>
     <form>
-        <input type="text" name="search" id="search" placeholder="חפש שם דיון" ng-model="filterForum" /> מיין לפי :
+        <input type="text" name="search" id="search" placeholder="חפש שם דיון" ng-model="filterDiscussion" /> מיין לפי :
         <select ng-model="orderForum" name="sort" id="sort">
           <option value="">כולם</option>
-          <option value="target-Vision">מטרה-חזון</option>
+          <option value="section">מטרה-חזון</option>
           
           <option value="category">קטגורי'א</option>
 
           <option value="author">נפתח על ידי</option>
-          <option value="replies">משובים</option>
+          <option value="replies">מס. משובים</option>
           <option value="lastPost">משוב אחרון</option>
           
         </select>
