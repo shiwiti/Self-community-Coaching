@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="page-header">
+        <h1>פורום המתאמן {{greetName}}</h1>
+        <div class="discussion-header">
+            <!-- <img ng-src="{{xxx.imageUrl}}" class="img-responsive" alt="Image"> -->
+            <h3>{{discussion.name}}</h3>
+            <h5>
+                <p> מטרה/חזון: {{discussion.section}} {{discussion.category}}קטגוריא:</p>
+            </h5>
+            <p> בתאריך: {{discussion.startDate}} {{discussion.author}}על ידי:</p>
+        </div>
+        <div class="discussion-content">
+            <p>{{discussion.content}}</p>
+        </div>
+    </div>
+    <p>
+        <a class="btn btn-primary btn-lg" ng-click="addReply()"> הוסף תגובה </a>
+    </p>
+
+    <!-- מקום להצגת התגובות בצורה מקוננת -->
+
+    <div class="col-xs-12" ng-repeat="reply in replyArr">
+
+        <div class="well reply-item">                            
+                            <h3>{{recipe.name}}</h3>
+                            <p>{{recipe.description}}</p>
+                
+                        </div>
+                        
+                    </div>
+                
+
+
+        </div>
+
+        <!-- <h1>תכולת ה- forum</h1>
+    <p> סך דיונים: {{getTotalDiscussion()}}</p>
+    <p> מתוכן אודות מטרות: {{getTargetsdiscussion()}}</p> -->
+    </div>
+</div>
