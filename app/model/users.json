@@ -5,7 +5,7 @@
         "email": "nadav@gmail.com",
         "password": "123",
         "role": "coachee",
-        "forum": "nadav-forum.json",        
+        "forumData": "nadav-forum.json",        
         "targetsData": [
             {
                 "startDate": "2017-08-02",
@@ -47,7 +47,7 @@
         "email": "aharoni@gmail.com",
         "password": "123",
         "role": "coachee",
-        "forum": "aharoni-forum.json",
+        "forumData": "aharoni-forum.json",
         "targetsData": [
             {
                 "startDate": "2017-08-02",

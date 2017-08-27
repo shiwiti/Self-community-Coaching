@@ -12,7 +12,7 @@ coachApp.controller("viewForumCtrl", function ($scope, $http, $location, activeU
     if (discussions.getAll().length === 0) {
         $scope.discussionsArr = [];
 
-        $http.get(activeUser.get().forum).then(function (response) {
+        $http.get(activeUser.get().forumData).then(function (response) {
             discussions.load(response.data);
             $scope.discussionsArr = discussions.getAll();
         });
@@ -28,8 +28,7 @@ coachApp.controller("viewForumCtrl", function ($scope, $http, $location, activeU
     $scope.getTargetDiscussions = function () {
         $scope.targsDisc = 0;
         for (var i = 0; i < $scope.discussionsArr.length; i++) {
-
-            if ($scope.discussionsArr[i].section === target) {
+            if ($scope.discussionsArr[i].section === "target") {
                 $scope.targsDisc++;
             }
         }

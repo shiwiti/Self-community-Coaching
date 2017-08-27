@@ -15,7 +15,8 @@ coachApp.controller("NavCtrl", function ($scope, activeUser, $uibModal, visions,
         activeUser.logout();
         $location.path("/"),
             targets.removeAll,
-            visions.removeAll
+            visions.removeAll,
+            discussions.removeAll
     }
 
 

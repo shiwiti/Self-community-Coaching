@@ -4,10 +4,10 @@ coachApp.factory("Discussion", function () {
         this.startDate = plainObject.startDate;
         this.section = plainObject.Section; //target Or Vision
         this.name = plainObject.name;
-        this.category = plainObject.category;
+        this.category = plainObject.category;// אישי-מקצועי-חברתי-חדש
         this.author = plainObject.author;        
         this.content = plainObject.content;  
-        this.replyIndex = plainObject.replyIndex;
+        this.replyIndex = plainObject.replyIndex // בדיון ללא תגובות = 0
     };
 
     return Discussion;
@@ -37,7 +37,7 @@ coachApp.factory("discussions", function (Discussion, $http) {
         discussionsArr.push(discussion)
     };
 
-    var addReply = function (index, discussion) { //index=discussionIndex
+    var addReply = function (index,reply) { //index=discussionIndex
         // var repliesArr = [];// (?)
         discussion.replyIndex++;
         

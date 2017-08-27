@@ -12,7 +12,7 @@
 
           <option value="author">נפתח על ידי</option>
           <option value="replies">מס. משובים</option>
-          <option value="lastPost">משוב אחרון</option>
+          <!-- <option value="lastPost">הודעה אחרונה</option> -->
           
         </select>
     </form>
@@ -23,7 +23,7 @@
             <th>קטגוריה</th>
             <th>נפתח על ידי  </th>
             <th>משובים</th>
-            <th>משוב אחרון</th>
+            <th>הודעה אחרונה</th>
         </tr>
         <tr ng-repeat="discussion in forumArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
             <td class="odd" ng-if="$odd">{{discussion.name}}</td>
@@ -32,8 +32,8 @@
             <td class="even" ng-if="$even">{{discussion.category}}</td>
             <td class="odd" ng-if="$odd">{{discussion.author}}</td>
             <td class="even" ng-if="$even">{{discussion.author}}</td>
-            <td class="odd" ng-if="$odd">{{discussion(replies)}}</td>
-            <td class="even" ng-if="$even">{{discussion(replies)}}</td>
+            <td class="odd" ng-if="$odd">{{discussion(replyIndex)}}</td>
+            <td class="even" ng-if="$even">{{discussion(replyIndex)}}</td>
             <td class="odd" ng-if="$odd">{{discussion.lastPost}}</td>
             <td class="even" ng-if="$even">{{discussion.lastPost}}</td>
 
