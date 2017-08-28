@@ -15,7 +15,7 @@ coachApp.controller("newReplyCtrl", function ($scope, $location, Discussoin, dis
         $scope.create = function () {
             if($scope.discussion.replyIndex.content){      // verify reply is not empty     
             $uibModalInstance.close("added");
-            discussions.addReply($routeParams.discussionsIndex, $scope.discussion.reply);
+            discussions.addReply($routeParams.discussionsIndex, $scope.discussion.replyIndex);
             $location.path("/forum");
         }
         else {
