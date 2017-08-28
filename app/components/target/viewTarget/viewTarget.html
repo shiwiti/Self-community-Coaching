@@ -13,7 +13,8 @@
         </select>
     </form>
 
-    <table class="oddEvenTable table table-condensed">
+    <!-- <table class="oddEvenTable table table-condensed"> -->
+            <table class="table table-condensed">
         <tr>
             <th>שם המטרה</th>
             <th>קטגוריה</th>
@@ -21,14 +22,19 @@
             <th>מצב המטרה</th>
         </tr>
         <tr ng-repeat="target in targetArr | filter:filterBytargetName | orderBy: orderTarget" ng-click="openDetails($index)" class="target-item">
-            <td class="odd" ng-if="$odd">{{target.name}}</td>
+            <!-- <td class="odd" ng-if="$odd">{{target.name}}</td>
             <td class="even" ng-if="$even">{{target.name}}</td>
             <td class="odd" ng-if="$odd">{{target.category}}</td>
             <td class="even" ng-if="$even">{{target.category}}</td>
             <td class="odd" ng-if="$odd">{{target.reqDate}}</td>
             <td class="even" ng-if="$even">{{target.reqDate}}</td>
             <td class="odd" ng-if="$odd">{{isCompHebr(target)}}</td>
-            <td class="even" ng-if="$even">{{isCompHebr(target)}}</td>
+            <td class="even" ng-if="$even">{{isCompHebr(target)}}</td> -->
+
+            <td>{{target.name}}</td>
+            <td>{{target.category}}</td>
+            <td>{{target.reqDate}}</td>
+            <td>{{isCompHebr(target)}}</td>
         </tr>
     </table>
 

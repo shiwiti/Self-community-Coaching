@@ -11,13 +11,13 @@
           <option value="category">קטגורי'א</option>
 
           <option value="author">נפתח על ידי</option>
-          <option value="replies">מס. משובים</option>
+          <option value="replyIndex">מס. משובים</option>
           <!-- <option value="lastPost">הודעה אחרונה</option> -->
           
         </select>
     </form>
 
-    <table class="oddEvenTable table table-condensed">
+    <table class="table table-condensed">
         <tr>
             <th>שם הדיון</th>
             <th>קטגוריה</th>
@@ -26,17 +26,12 @@
             <th>הודעה אחרונה</th>
         </tr>
         <tr ng-repeat="discussion in forumArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
-            <td class="odd" ng-if="$odd">{{discussion.name}}</td>
-            <td class="even" ng-if="$even">{{discussion.name}}</td>
-            <td class="odd" ng-if="$odd">{{discussion.category}}</td>
-            <td class="even" ng-if="$even">{{discussion.category}}</td>
-            <td class="odd" ng-if="$odd">{{discussion.author}}</td>
-            <td class="even" ng-if="$even">{{discussion.author}}</td>
-            <td class="odd" ng-if="$odd">{{discussion(replyIndex)}}</td>
-            <td class="even" ng-if="$even">{{discussion(replyIndex)}}</td>
-            <td class="odd" ng-if="$odd">{{discussion.lastPost}}</td>
-            <td class="even" ng-if="$even">{{discussion.lastPost}}</td>
-
+            <td>{{discussion.name}}</td>
+            <td>{{discussion.section}}</td>
+            <td>{{discussion.category}}</td>
+            <td>{{discussion.author}}</td>
+            <td>{{discussion(replyIndex)}}</td>
+            <!-- <td>{{discussion.lastPost}}</td> -->
         </tr>
     </table>
 
