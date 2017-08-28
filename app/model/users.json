@@ -47,7 +47,7 @@
         "email": "aharoni@gmail.com",
         "password": "123",
         "role": "coachee",
-        "forumData": "aharoni-forum.json",
+        "forumData": "app/model/aharoni-forum.json",
         "targetsData": [
             {
                 "startDate": "2017-08-02",

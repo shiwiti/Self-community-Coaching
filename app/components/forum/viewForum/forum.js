@@ -28,7 +28,7 @@ coachApp.controller("viewForumCtrl", function ($scope, $http, $location, activeU
     $scope.getTargetDiscussions = function () {
         $scope.targsDisc = 0;
         for (var i = 0; i < $scope.discussionsArr.length; i++) {
-            if ($scope.discussionsArr[i].section === "target") {
+            if ($scope.discussionsArr[i].section === "מטרה") {
                 $scope.targsDisc++;
             }
         }

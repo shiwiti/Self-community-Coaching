@@ -20,17 +20,18 @@
     <table class="table table-condensed">
         <tr>
             <th>שם הדיון</th>
+            <th>מטרה-חזון</th>
             <th>קטגוריה</th>
             <th>נפתח על ידי  </th>
             <th>משובים</th>
-            <th>הודעה אחרונה</th>
+            <!-- <th>הודעה אחרונה</th> -->
         </tr>
-        <tr ng-repeat="discussion in forumArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
+        <tr ng-repeat="discussion in discussionsArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
             <td>{{discussion.name}}</td>
             <td>{{discussion.section}}</td>
             <td>{{discussion.category}}</td>
             <td>{{discussion.author}}</td>
-            <td>{{discussion(replyIndex)}}</td>
+            <td>{{discussion.replyIndex}}</td>
             <!-- <td>{{discussion.lastPost}}</td> -->
         </tr>
     </table>
@@ -40,6 +41,6 @@
     </p>
 
     <h1>תכולת ה- forum</h1>
-    <p> סך דיונים: {{getTotalDiscussion()}}</p>
-    <p> מתוכן אודות מטרות: {{getTargetsdiscussion()}}</p>
+    <p> סך דיונים: {{getTotalDiscussions()}}</p>
+    <p> מתוכן אודות מטרות: {{getTargetDiscussions()}}</p>
 </div>

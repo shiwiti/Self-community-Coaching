@@ -31,14 +31,14 @@ tr:nth-child(even) {
 }
  /*table, td .odd {get default background-color}*/
 
-.target-item {
+.target-item, .vision-item, .discussion-item {
     cursor: pointer;
 }
 
 
-.vision-item {
+/* .vision-item {
     cursor: pointer;
-}
+} */
 
 /* .addVision {
     display: block;

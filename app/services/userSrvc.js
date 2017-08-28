@@ -9,6 +9,7 @@ coachApp.factory("User", function () {
             return this.firstName + " " + this.lastName;
         };
         this.role = plainObject.role;
+        this.forumData = plainObject.forumData;
         this.targetsData = plainObject.targetsData;
         this.visionsData = plainObject.visionsData;
 

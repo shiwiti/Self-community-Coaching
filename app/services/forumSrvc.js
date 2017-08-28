@@ -2,7 +2,7 @@
 coachApp.factory("Discussion", function () {
     function Discussion(plainObject) {
         this.startDate = plainObject.startDate;
-        this.section = plainObject.Section; //target Or Vision
+        this.section = plainObject.section; //target Or Vision
         this.name = plainObject.name;
         this.category = plainObject.category;// אישי-מקצועי-חברתי-חדש
         this.author = plainObject.author;        
