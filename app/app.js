@@ -29,6 +29,12 @@ coachApp.config(function ($routeProvider) {
             controller: "viewForumCtrl"
         })
 
+        .when("/forum/:forumIndex", {
+            templateUrl: "app/components/forum/viewDiscussion/viewDiscussion.html",
+            controller: ""// ToDo need to add appropriate controller
+        })
+
+
         //no need - uses a modal page
         // .when("/visions/newVision", {
         //     templateUrl: "app/components/vision/newVision/newVision.html",

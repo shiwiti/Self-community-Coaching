@@ -1,4 +1,4 @@
-coachApp.controller("newDiscussoinCtrl", function ($scope, $location, Discussoin, discussoins, activeUser, $uibModalInstance) {
+coachApp.controller("newDiscussionCtrl", function ($scope, $location, Discussion, discussions, activeUser, $uibModalInstance) {
     
         // If the user is not logged in going back to home screen
         if (!activeUser.isLoggedIn()) {
@@ -6,10 +6,10 @@ coachApp.controller("newDiscussoinCtrl", function ($scope, $location, Discussoin
             return;
         }
     
-        discussoins.getCategories().then(function (response) {
+        discussions.getCategories().then(function (response) {
             $scope.categories = response.data;
         });
-        $scope.target = new Discussoin({});
+        $scope.target = new Discussion({});
     
         $scope.cancel = function () {
             $uibModalInstance.close("canceled");
@@ -17,9 +17,9 @@ coachApp.controller("newDiscussoinCtrl", function ($scope, $location, Discussoin
         }
     
         $scope.create = function () {
-            if($scope.discussoin.name){            
+            if($scope.discussion.name){            
             $uibModalInstance.close("added");
-            discussoins.addDiscussion($scope.discussoin);
+            discussions.addDiscussion($scope.discussion);
             $location.path("/forum");
         }
         else {
