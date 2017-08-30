@@ -1,4 +1,4 @@
-coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, activeUser, targets, $uibModal) {
+coachApp.controller("viewTargetCtrl", function ($scope, $http, $location, activeUser, targets,discussions, $uibModal) {
 
     // If the user is not logged in going back to home screen
     if (!activeUser.isLoggedIn()) {
@@ -87,3 +87,23 @@ return txt;
 }
 
 });
+
+
+// is it possible to include different types ...
+// Making sure that we are only loading *Forum* once
+    if (discussions.getAll().length === 0) {
+        $scope.discussionsArr = [];
+
+        $http.get(activeUser.get().forumData).then(function (response) {
+            discussions.load(response.data);
+            $scope.discussionsArr = discussions.getAll();
+        });
+    } else {
+        $scope.discussionsArr = discussions.getAll();
+    }
+
+    $scope.openDetails = function (index) {
+        $location.path("/forum/" + index)
+    }
+
+
