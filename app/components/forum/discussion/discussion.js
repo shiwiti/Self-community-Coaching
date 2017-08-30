@@ -17,13 +17,14 @@ coachApp.controller("newDiscussionCtrl", function ($scope, $location, Discussion
         }
     
         $scope.create = function () {
-            if($scope.discussion.name){            
+            if($scope.discussion.name && $scope.discussion.section){            
             $uibModalInstance.close("added");
+            $scope.discussion.author = activeUser.get().fullName();           
             discussions.addDiscussion($scope.discussion);
             $location.path("/forum");
         }
         else {
-            alert("נא ודא ערך בשדה שם" )
+            alert("נא ודא ערך בשדות שם ו חזון/מטרה" )
         }
     }
     

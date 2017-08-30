@@ -1,4 +1,4 @@
-coachApp.controller("NavCtrl", function ($scope, activeUser, $uibModal, visions, targets, $location) {
+coachApp.controller("NavCtrl", function ($scope, activeUser, $uibModal, visions, targets, discussions, $location) {
 
     $scope.isLoggedIn = function () {
         return activeUser.isLoggedIn();

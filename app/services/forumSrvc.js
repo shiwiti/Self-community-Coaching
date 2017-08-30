@@ -18,12 +18,14 @@ function formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
             day = '' + d.getDate(),
-            year = d.getFullYear();
+            year = d.getFullYear()
+            hour = d.getHours(),
+            minute = d.getMinutes();
 
         if (month.length < 2) month = '0' + month;
         if (day.length < 2) day = '0' + day;
 
-        return [year, month, day].join('-');
+        return [year, month, day, "  ", hour, minute].join('-');// to check
     }
     return "0000-00-00";//no valid date
 }
@@ -34,6 +36,7 @@ coachApp.factory("discussions", function (Discussion, $http) {
     var addDiscussion = function (discussion) {
         discussion.startDate = formatDate(new Date());
         discussion.replyIndex=0;
+        // discussion.author = 
         discussionsArr.push(discussion)
     };
 
