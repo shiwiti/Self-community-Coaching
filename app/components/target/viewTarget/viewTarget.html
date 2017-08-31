@@ -46,25 +46,9 @@
     <p> סך המטרות: {{getTotalTargets()}}</p>
     <p> מטרות פתוחות: {{getCompletedTargets()}}</p>
 
-    <table class="table table-condensed">
-        <tr>
-            <th>שם הדיון</th>
-            <th>מטרה-חזון</th>
-            <th>קטגוריה</th>
-            <th>נפתח על ידי  </th>
-            <th> הדיון מ:</th>
-            <th>משובים</th>
-            <!-- <th>הודעה אחרונה</th> -->
-        </tr>
-        <tr ng-repeat="discussion in discussionsArr | filter:filterByDiscussionName | orderBy: orderForum" ng-click="openDetails($index)" class="discussion-item">
-            <td>{{discussion.name}}</td>
-            <td>{{discussion.section}}</td>
-            <td>{{discussion.category}}</td>
-            <td>{{discussion.author}}</td>
-            <td>{{discussion.startDate}}</td>
-            <td>{{discussion.replyIndex}}</td>
-            <!-- <td>{{discussion.lastPost}}</td> -->
-        </tr>
-    </table>
+<a href="#!/forum">מעבר ל פורום אימוני</a>
+
+<!-- <a href="#/path/to/somewhere" ... other angular attributes>Take Me Somewhere</a> -->
+
 
 </div>

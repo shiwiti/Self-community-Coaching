@@ -13,7 +13,7 @@ coachApp.factory("Discussion", function () {
     return Discussion;
 });
 
-function formatDate(date) {
+function formatForumDate(date) {
     if (date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -34,7 +34,7 @@ coachApp.factory("discussions", function (Discussion, $http) {
     var discussionsArr = [];
 
     var addDiscussion = function (discussion) {
-        discussion.startDate = formatDate(new Date());
+        discussion.startDate = formatForumDate(new Date());
         discussion.replyIndex=0;
         // discussion.author = 
         discussionsArr.push(discussion)
@@ -44,7 +44,7 @@ coachApp.factory("discussions", function (Discussion, $http) {
         // var repliesArr = [];// (?)
         discussion.replyIndex++;
         
-        discussion.replyIndex.startDate = formatDate(new Date());
+        discussion.replyIndex.startDate = formatForumDate(new Date());
         // discussion.replyIndex.content = // @ reply.js
 
         discussionsArr[index] = discussion;

@@ -89,21 +89,21 @@ return txt;
 });
 
 
-// is it possible to include different types ...
+// is it possible to include different controllers at one page[=viewTarget.html].
 // Making sure that we are only loading *Forum* once
-    if (discussions.getAll().length === 0) {
-        $scope.discussionsArr = [];
+    // if (discussions.getAll().length === 0) {
+    //     $scope.discussionsArr = [];
 
-        $http.get(activeUser.get().forumData).then(function (response) {
-            discussions.load(response.data);
-            $scope.discussionsArr = discussions.getAll();
-        });
-    } else {
-        $scope.discussionsArr = discussions.getAll();
-    }
+    //     $http.get(activeUser.get().forumData).then(function (response) {
+    //         discussions.load(response.data);
+    //         $scope.discussionsArr = discussions.getAll();
+    //     });
+    // } else {
+    //     $scope.discussionsArr = discussions.getAll();
+    // }
 
-    $scope.openDetails = function (index) {
-        $location.path("/forum/" + index)
-    }
+    // $scope.openDetails = function (index) {
+    //     $location.path("/forum/" + index)
+    // }
 
 
