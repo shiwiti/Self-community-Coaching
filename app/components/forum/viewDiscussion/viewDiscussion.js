@@ -1,4 +1,4 @@
-coachApp.controller("viewDiscCtrl", function ($scope, $location, activeUser, Discussion ,discussions, $uibModal) {
+coachApp.controller("viewDiscCtrl", function ($scope, $location, $routeParams, activeUser, Discussion ,discussions, $uibModal) {
     
         // If the user is not logged in going back to home screen
         if (!activeUser.isLoggedIn()) {

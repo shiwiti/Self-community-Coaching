@@ -31,7 +31,7 @@ coachApp.config(function ($routeProvider) {
 
         .when("/forum/:forumIndex", {
             templateUrl: "app/components/forum/viewDiscussion/viewDiscussion.html",
-            controller: ""// ToDo need to add appropriate controller
+            controller: "viewDiscCtrl"
         })
 
 
