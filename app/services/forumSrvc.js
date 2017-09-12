@@ -7,11 +7,23 @@ coachApp.factory("Discussion", function () {
         this.category = plainObject.category;// אישי-מקצועי-חברתי-חדש
         this.author = plainObject.author;        
         this.content = plainObject.content;  
-        this.replyIndex = plainObject.replyIndex // בדיון ללא תגובות = 0
+        this.replyIndex = plainObject.replyIndex; // בדיון ללא תגובות = 0
+        this.replies = plainObject.replies
     };
 
     return Discussion;
 });
+
+coachApp.factory("Reply", function () {
+    function Reply(plainObject) {
+        this.date = plainObject.date;
+        this.author = plainObject.author;
+        this.content = plainObject.content
+    };
+
+    return Reply;
+});
+
 
 function formatForumDate(date) {
     if (date) {
@@ -31,8 +43,9 @@ function formatForumDate(date) {
 }
 
 coachApp.factory("discussions", function (Discussion, $http) {
-    var discussionsArr = [];
-
+    var discussionsArr = [],
+    repliesArr = [];
+    
     var addDiscussion = function (discussion) {
         discussion.startDate = formatForumDate(new Date());
         discussion.replyIndex=0;

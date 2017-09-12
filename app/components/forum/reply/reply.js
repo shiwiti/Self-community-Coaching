@@ -1,4 +1,4 @@
-coachApp.controller("newReplyCtrl", function ($scope, $location, Discussoin, discussoins, activeUser, $uibModalInstance) {
+coachApp.controller("newReplyCtrl", function ($scope, $location, Discussion, discussions, activeUser, $uibModalInstance) {
     
         // If the user is not logged in going back to home screen
         if (!activeUser.isLoggedIn()) {
@@ -13,9 +13,9 @@ coachApp.controller("newReplyCtrl", function ($scope, $location, Discussoin, dis
         }
     
         $scope.create = function () {
-            if($scope.discussion.replyIndex.content){      // verify reply is not empty     
+            if($scope.reply.content){      // verify reply is not empty     
             $uibModalInstance.close("added");
-            discussions.addReply($routeParams.discussionsIndex, $scope.discussion.replyIndex);
+            discussions.addReply($routeParams.discussionsIndex, $scope.reply);
             $location.path("/forum");
         }
         else {
