@@ -42,7 +42,7 @@ function formatForumDate(date) {
     return "0000-00-00";//no valid date
 }
 
-coachApp.factory("discussions", function (Discussion, $http) {
+coachApp.factory("discussions", function (Discussion, Reply, $http) {
     var discussionsArr = [],
     repliesArr = [];
     
@@ -53,11 +53,10 @@ coachApp.factory("discussions", function (Discussion, $http) {
         discussionsArr.push(discussion)
     };
 
-    var addReply = function (index,reply) { //index=discussionIndex
-        // var repliesArr = [];// (?)
-        discussion.replyIndex++;
-        
-        discussion.replyIndex.startDate = formatForumDate(new Date());
+    var addReply = function (index,reply) { //index=discussion-Index
+        discussionsArr[index].replyIndex++;
+        repliesArr.push(reply);       
+        discussion.replies[replyIndex].date = formatForumDate(new Date());
         // discussion.replyIndex.content = // @ reply.js
 
         discussionsArr[index] = discussion;
@@ -85,6 +84,7 @@ coachApp.factory("discussions", function (Discussion, $http) {
 
     var removeAll = function () {
         discussionsArr = [];
+        repliesArr = []
     };
 
     return {
